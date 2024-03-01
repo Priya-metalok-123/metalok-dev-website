@@ -1,0 +1,587 @@
+@import '../../scss/default/color_variable';
+
+.cs-portfolio_1_heading {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  .cs-filter_menu {
+    margin-top: 5px;
+    margin-bottom: 15px;
+  }
+}
+
+.cs-portfolio-career.cs-style1-career {
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  height: 500px;
+  display: block;
+  position: relative;
+  .cs-portfolio_hover-career {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    background-color: rgba($black, 0.4);
+    transition: all 0.4s ease;
+    z-index: 2;
+  }
+  .cs-plus {
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    left: 50%;
+    z-index: 1;
+    top: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.4);
+    transition: all 0.4s ease;
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      height: 4px;
+      width: 100%;
+      background-color: #fff;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    &::before {
+      transform: translate(-50%, -50%) rotate(90deg);
+    }
+  }
+  &:hover {
+    .cs-portfolio_hover-career {
+      opacity: 1;
+    }
+    .cs-plus {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+  .cs-portfolio_bg-career {
+    height: 100%;
+    width: 100%;
+    border-radius: inherit;
+    background-Color:  '#122450' !important;
+  }
+  .cs-portfolio_info-career {
+    height: 300px;
+    width: 400px;
+    border-radius: 50%;
+    padding: 105px 20px 80px 65px;
+    bottom: -60px;
+    left: -40px;
+    position: absolute;
+    z-index: 2;
+  }
+  .cs-portfolio_info_bg-career {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: inherit;
+    left: 0;
+    top: 0;
+  }
+  .cs-portfolio_title {
+    font-size: 22px;
+    margin-bottom: 5px;
+    position: relative;
+    z-index: 2;
+  }
+  .cs-portfolio_subtitle {
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+    padding-right: 30px;
+    color: $secondary;
+    &::after {
+      content: '';
+      height: 1px;
+      width: 20px;
+      background-color: currentColor;
+      border-radius: 3px;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      margin-top: 2px;
+    }
+  }
+  &.cs-type1 {
+    height: 465px;
+    .cs-portfolio_info_bg-career{
+      left: -50px;
+      top: 50px;
+      opacity: 0;
+      transition: all 0.4s ease;
+    }
+    &:hover {
+      .cs-portfolio_info_bg-career {
+        left: 0px;
+        top: 0px;
+        opacity: 1;
+      }
+    }
+  }
+  .cs-lightbox_item {
+    > div > img {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      left: 0;
+      top: 0;
+      object-fit: cover;
+      cursor: zoom-in;
+      z-index: 5;
+      opacity: 0;
+    }
+  }
+  &.cs-type1,
+  &.cs-type2 {
+    img:not(.__react_modal_image__medium_img) {
+      width: 100%;
+    }
+
+    .cs-portfolio_title,
+    .cs-portfolio_subtitle {
+      top: 15px;
+      opacity: 0;
+      transition: all 0.4s ease;
+    }
+    &:hover {
+      .cs-portfolio_title {
+        top: 0px;
+        opacity: 1;
+        transition-delay: 0.2s;
+      }
+      .cs-portfolio_subtitle {
+        top: 0px;
+        opacity: 1;
+        transition-delay: 0.3s;
+      }
+    }
+  }
+  &.cs-type2 {
+    border-radius: 5px;
+    .cs-portfolio_hover-career {
+      background: linear-gradient(
+        180deg,
+        rgba(255, 74, 23, 0.7) 0%,
+        rgba(0, 0, 0, 0.8) 100%
+      );
+    }
+    .cs-portfolio_info_bg-career {
+      display: none;
+    }
+    .cs-portfolio_info-career {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      text-align: center;
+      height: 100%;
+    }
+
+    .cs-portfolio_text-career {
+      position: absolute;
+      top: 10%;
+      // left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  &.cs-size1 {
+    height: 299px;
+  }
+  &.cs-size2 {
+    height: 622px;
+  }
+  &.cs-size3 {
+    height: 600px;
+  }
+}
+
+.__react_modal_image__modal_container {
+  cursor: zoom-out;
+  .__react_modal_image__medium_img {
+    cursor: initial;
+  }
+}
+
+.cs-portfolio.cs-style2 {
+  position: relative;
+  max-width: 1920px;
+  margin: auto;
+  .cs-gradient_shape {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    height: 600px;
+    width: 600px;
+    border-radius: 50%;
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(41, 0, 208, 0.2) 0%,
+      rgba(24, 24, 24, 0.2) 100%
+    );
+    filter: blur(50px);
+  }
+  .cs-portfolio_img.active {
+    .cs-shine_hover_1 {
+      &::before {
+        animation: shine 1.3s;
+      }
+    }
+  }
+  .cs-section_heading.cs-style1-career {
+    position: relative;
+    z-index: 2;
+  }
+  .cs-portfolio_img_title {
+    margin: 0;
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg) translateY(50%);
+    left: calc(((100vw - 1300px) / 2) / 2);
+    margin: 0 0 0 -30px;
+    white-space: nowrap;
+    letter-spacing: 0.05em;
+    color: transparent;
+    -webkit-text-stroke: 2px #ffa800;
+    // -webkit-text-stroke: 2px #ff4a17;
+    font-size: 50px;
+  }
+  &.cs-type1 {
+    .cs-portfolio_img_title {
+      left: initial;
+      right: calc(((100vw - 1300px) / 2) / 2);
+      margin: 0 -30px 0 0;
+    }
+    .cs-gradient_shape {
+      right: initial;
+      left: 0;
+    }
+  }
+}
+
+.cs-page_navigation > * {
+  display: flex;
+}
+
+@media screen and (max-width: 1540px) {
+  .cs-portfolio.cs-style1-career {
+    height: 450px;
+  }
+  .cs-portfolio.cs-style1-career.cs-size3 {
+    height: 500px;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .cs-portfolio.cs-style2 {
+    .cs-portfolio_img_title {
+      left: calc(((100vw - 1120px) / 2) / 2);
+      font-size: 35px;
+      margin: 0 0 0 -27px;
+    }
+    &.cs-type1 {
+      .cs-portfolio_img_title {
+        left: initial;
+        right: calc(((100vw - 1120px) / 2) / 2);
+        margin: 0 -27px 0 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1380px) {
+  .cs-portfolio.cs-style1-career.cs-portfolio_title {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .cs-portfolio.cs-style2 {
+    .cs-portfolio_img_title {
+      left: calc(((100vw - 940px) / 2) / 2);
+    }
+    &.cs-type1 {
+      .cs-portfolio_img_title {
+        left: initial;
+        right: calc(((100vw - 940px) / 2) / 2);
+      }
+    }
+  }
+  .cs-portfolio_1_heading {
+    flex-direction: column;
+    align-items: flex-start;
+    .cs-filter_menu {
+      margin-top: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .cs-portfolio.cs-style2 {
+    .cs-portfolio_img {
+      padding-left: 60px;
+    }
+    .cs-portfolio_img_title {
+      margin-left: 0;
+    }
+  }
+  .cs-portfolio.cs-style2.cs-type1 {
+    .cs-portfolio_img {
+      padding-right: 60px;
+    }
+    .cs-portfolio_img_title {
+      margin-right: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .cs-portfolio.cs-style1-career {
+    height: 380px;
+  }
+  .cs-portfolio.cs-style2,
+  .cs-portfolio.cs-style2.cs-type1 {
+    .cs-portfolio_img {
+      position: relative;
+      padding-left: 70px;
+      padding-right: 0;
+    }
+    .cs-portfolio_img_title {
+      left: 30px;
+      right: initial;
+      margin: 0 0 0 -27px;
+    }
+    .cs-gradient_shape {
+      height: 400px;
+      width: 400px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &.cs-type1 {
+      .cs-portfolio_img {
+        padding-left: 0;
+        padding-right: 70px;
+      }
+      .cs-portfolio_img_title {
+        left: initial;
+        right: 0px;
+        margin: 0 -27px 0 0;
+      }
+    }
+  }
+  .cs-portfolio_1_heading {
+    .cs-filter_menu {
+      margin-bottom: 10px;
+    }
+  }
+}
+@media (min-width:320px) and (max-width:768px){
+  .cs-portfolio_img_title {
+    left: initial;
+    right: 10px ;
+    margin: 0 -27px 0 0;
+  }
+  .cs-portfolio.cs-style2 .cs-portfolio_img_title {
+    margin-left: -35px !important;
+}
+.cs-portfolio.cs-style2.cs-type1 .cs-portfolio_img_title, .cs-portfolio.cs-style2.cs-type1.cs-type1 .cs-portfolio_img_title {
+  left: initial;
+  right: 20px;
+  margin: 0 -27px 0 0;
+}
+}
+@media screen and (max-width: 768px) {
+  .cs-portfolio.cs-style1-career .cs-portfolio_info-career {
+    height: 200px;
+    width: 300px;
+    padding: 65px 20px 30px 45px;
+    bottom: -40px;
+    left: -30px;
+  }
+  .cs-portfolio.cs-style1-career.cs-size1 .cs-portfolio_info-career {
+    height: 180px;
+    width: 270px;
+  }
+  .cs-portfolio.ccs-style1-career.cs-size2 .cs-portfolio_info-career {
+    height: 400px;
+    width: 600px;
+    padding: 100px 20px 80px 65px;
+  }
+  .cs-portfolio.cs-style1-career.cs-size3 .cs-portfolio_info-career {
+    height: 380px;
+    width: 570px;
+    padding: 95px 20px 75px 60px;
+  }
+  .cs-portfolio.ccs-style1-career .cs-portfolio_title {
+    font-size: 18px;
+  }
+  .cs-portfolio.cs-style2 .cs-portfolio_img_title {
+    font-size: 30px;
+    margin: 0 0 0 -20px;
+  }
+  .cs-portfolio.cs-style2 {
+    .cs-portfolio_img {
+      padding-left: 50px;
+    }
+    .cs-portfolio_img_title {
+      margin-left: -20px;
+    }
+  }
+  .cs-portfolio.cs-style2.cs-type1 {
+    .cs-portfolio_img {
+      padding-right: 50px;
+    }
+    .cs-portfolio_img_title {
+      margin-right: -20px;
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .cs-portfolio.cs-style1-career.cs-size2 .cs-portfolio_info-career {
+    padding: 90px 20px 70px 55px;
+  }
+  .cs-portfolio.cs-style1-career.cs-size3 .cs-portfolio_info-career {
+    padding: 85px 20px 65px 50px;
+  }
+  .cs-portfolio.cs-style2 .cs-portfolio_img_title {
+    font-size: 30px;
+    margin: 0 0 0 -15px;
+  }
+  .cs-portfolio.cs-style2 {
+    .cs-portfolio_img {
+      padding-left: 0px;
+    }
+    .cs-portfolio_img_title {
+      margin-left: -15px;
+    }
+  }
+  .cs-portfolio.cs-style2.cs-type1 {
+    .cs-portfolio_img {
+      padding-right: 40px;
+    }
+    .cs-portfolio_img_title {
+      margin-right: -15px;
+    }
+  }
+}
+.career-bg-entire{
+
+  // height: 344px;
+padding:30px 5px 0px 20px;
+  background: #122450;
+  border-radius: 20px;
+  // justify-content: center;
+  // text-align: center;
+}
+.career_text{
+    color: rgba(254, 254, 254, 0.7);
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6em;
+    // align-items: center;
+    height: 143px;
+}
+.career-heading  {
+    clear: both;
+    color: #FEFEFE;
+    padding-bottom: 5px;
+    font-weight: 550;
+    line-height: 1.3em;
+    font-family: "Open Sans", sans-serif;
+    font-size: 25px;
+}
+.know-more-btn-career{
+  background-color: #ffa800;
+  width: 186px;
+  height: 41px;
+
+border-radius: 10px;
+
+font-family: "Open Sans", sans-serif;
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 27px;
+/* identical to box height */
+
+text-transform: capitalize;
+padding: 7px;
+color: #000c2b;
+text-align: center;
+
+}
+.full-time-text{
+  font-weight: 550;
+  color: #FEFEFE;
+}
+.job-apply-btn{
+  background: #FFA800;
+border-radius: 10px;
+width: 273px;
+height: 55px;
+margin: auto;
+text-align: center;
+padding: 7px;
+}
+.apply-btn-text-career{
+  font-family: "Open Sans", sans-serif;
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 36px;
+/* identical to box height */
+
+text-transform: capitalize;
+
+color: #FFFFFF;
+
+
+}
+.job-bullet-style li{
+  list-style-type: none;
+ 
+    font-size: 16px;
+    position: relative;
+    padding-left: 20px; /* Adjust the spacing between the bullet and the content */
+    margin-bottom: 5px;
+}
+.job-bullet-style li:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 40%;
+  transform: translateY(-20%);
+  width: 5px; /* Adjust the size of the bullet point */
+  height: 5px; /* Adjust the size of the bullet point */
+  background-color: rgb(253, 246, 246); /* Set the color of the bullet point */
+  border-radius: 50%;
+}
+.equal-height-cards {
+  display: flex;
+}
+
+.equal-height-cards > * {
+  flex: 1;
+ 
+}
+
+// new added 21-06-23
+
+.apply-btn-text-career:hover{
+  color: #122450; 
+}

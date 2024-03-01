@@ -1,0 +1,46 @@
+
+// .cs-shape_wrap_4 {
+//     position: relative;
+//     .cs-shape_4 {
+//       position: absolute;
+//       background-color: #000;
+//       border-radius: 50%;
+//       &:nth-child(1) {
+//         left: 5%;
+//         top: 42%;
+//         height: 100px;
+//         width: 100px;
+//         animation: animo-y 8s infinite;
+//       }
+//       &:nth-child(2) {
+//         left: 15%;
+//         top: 62%;
+//         height: 286px;
+//         width: 286px;
+//       }
+//     }
+//   }
+  .shape_bg-img_meta{
+    background-image: url('../../../public/images/meta.png');
+    background-size: cover;
+    animation: animo-y 3s infinite;
+
+  }
+  .shape_bg-img_block{
+    background-image: url('../../../public/images/block.png');
+    background-size: cover;
+    animation: animo-y 3s infinite;
+
+  }
+  .shape_bg-img_thred{
+
+    background-image: url('../../../public/images/three.png');
+    background-size: cover;
+    animation: animo-y 3s infinite;
+  }
+  .shape_bg-img_home{
+
+    background-image: url('../../../public/images/home.png');
+    background-size: cover;
+    animation: animo-y 3s infinite;
+  }
